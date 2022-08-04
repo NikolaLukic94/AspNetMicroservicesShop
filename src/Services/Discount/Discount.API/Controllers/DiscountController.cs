@@ -35,5 +35,19 @@ namespace Discount.API.Controllers
             await _repository.CreateDiscount(coupon);
             return CreatedAtRoute("GetDiscount", new { productName = coupon.ProductName }, coupon);
         }
+
+        [HttpPut]
+        [ProducesResponseType(typeof(Coupon), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<Coupon>> UpdateDiscount([FromBody] Coupon coupon)
+        {
+            return Ok(await _repository.UpdateDiscount(coupon));
+        }
+
+        [HttpDelete("{productName}", Name = "DeleteDiscount")]
+        [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult<bool>> DeleteDiscount(string productName)
+        {
+            return Ok(await _repository.DeleteDiscount(productName));
+        }
     }
 }
