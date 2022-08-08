@@ -1,4 +1,4 @@
-﻿using Discount.Grpc.Entities;
+﻿using Discount.GrpcEntities;
 using System.Threading.Tasks;
 
 namespace Discount.Grpc.Repositories

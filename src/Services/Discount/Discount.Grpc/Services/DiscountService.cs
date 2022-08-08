@@ -1,4 +1,11 @@
-﻿using Discount.Grpc.Repositories;
+﻿using AutoMapper;
+using Discount.Grpc.Protos;
+using Discount.Grpc.Repositories;
+using Discount.GrpcEntities;
+using Grpc.Core;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Threading.Tasks;
 
 namespace Discount.Grpc.Services
 {

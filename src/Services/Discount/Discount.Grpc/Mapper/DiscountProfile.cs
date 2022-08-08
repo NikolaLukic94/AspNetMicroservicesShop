@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Discount.Grpc.Entities;
 using Discount.Grpc.Protos;
+using Discount.GrpcEntities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
